@@ -16,14 +16,24 @@ class ChangeLanguage extends StatelessWidget {
             padding: WidgetStatePropertyAll(EdgeInsets.zero),
           ),
           onPressed: () => context.read<LocaleCubit>().changeLocale('en'),
-          child: const Text('Switch to English'),
+          child: const Text(
+            'Switch to English',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
         ),
         TextButton(
           style: const ButtonStyle(
             padding: WidgetStatePropertyAll(EdgeInsets.zero),
           ),
           onPressed: () => context.read<LocaleCubit>().changeLocale('ru'),
-          child: const Text('Переключить на русский'),
+          child: const Text(
+            'Переключить на русский',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
         ),
       ],
     );
