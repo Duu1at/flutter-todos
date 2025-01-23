@@ -1,7 +1,21 @@
 {
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    }
+  "@@locale": "en",
+  "editTodoDescriptionLabel": "Edit Todo Description",
+  "statsActiveTodoCountLabel": "Active Todos Count",
+  "statsView_completedTodos_listTile": "Completed Todos",
+  "statsCompletedTodoCountLabel": "Completed Todos Count",
+  "statsAppBarTitle": "Stats",
+  "todosOverviewEmptyText": "No todos available.",
+  "todosOverviewUndoDeletionButtonText": "Undo",
+  "todosOverviewTodoDeletedSnackbarText": "{title} deleted.",
+  "todosOverviewFilterTooltip": "Filter",
+  "todosOverviewFilterAll": "All",
+  "todosOverviewFilterActiveOnly": "Active Only",
+  "todosOverviewFilterCompletedOnly": "Completed Only",
+  "todosOverviewOptionsMarkAllIncomplete": "Mark all as incomplete",
+  "todosOverviewOptionsMarkAllComplete": "Mark all as complete",
+  "todosOverviewOptionsClearCompleted": "Clear completed todos",
+  "todosOverviewAppBarTitle": "Todos Overview",
+  "todosOverviewErrorSnackbarText": "An error occurred. Please try again.",
+  "todosOverviewOptionsTooltip": "Options"
 }

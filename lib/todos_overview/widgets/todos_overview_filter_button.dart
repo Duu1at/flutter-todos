@@ -18,7 +18,7 @@ class TodosOverviewFilterButton extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(16)),
       ),
       initialValue: activeFilter,
-      tooltip: "l10n.todosOverviewFilterTooltip",
+      tooltip: l10n.todosOverviewFilterTooltip,
       onSelected: (filter) {
         context.read<TodosOverviewBloc>().add(TodosOverviewFilterChanged(filter));
       },
@@ -26,15 +26,15 @@ class TodosOverviewFilterButton extends StatelessWidget {
         return [
           PopupMenuItem(
             value: TodosViewFilter.all,
-            child: Text("l10n.todosOverviewFilterAll"),
+            child: Text(l10n.todosOverviewFilterAll),
           ),
           PopupMenuItem(
             value: TodosViewFilter.activeOnly,
-            child: Text("l10n.todosOverviewFilterActiveOnly"),
+            child: Text(l10n.todosOverviewFilterActiveOnly),
           ),
           PopupMenuItem(
             value: TodosViewFilter.completedOnly,
-            child: Text("l10n.todosOverviewFilterCompletedOnly"),
+            child: Text(l10n.todosOverviewFilterCompletedOnly),
           ),
         ];
       },

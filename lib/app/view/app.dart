@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_todos/app/locale/locale_cubit.dart';
 import 'package:flutter_todos/home/view/home_page.dart';
-import 'package:flutter_todos/l10n/l10n.dart';
 import 'package:flutter_todos/theme/theme.dart';
 import 'package:todos_repository/todos_repository.dart';
 
@@ -14,7 +16,10 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return RepositoryProvider.value(
       value: todosRepository,
-      child: const AppView(),
+      child: BlocProvider(
+        create: (_) => LocaleCubit(),
+        child: const AppView(),
+      ),
     );
   }
 }
@@ -24,12 +29,23 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: FlutterTodosTheme.light,
-      darkTheme: FlutterTodosTheme.dark,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      home: const HomePage(),
+    return BlocBuilder<LocaleCubit, Locale>(
+      builder: (context, locale) {
+        return MaterialApp(
+          locale: locale,
+          supportedLocales: const [
+            Locale('en'),
+            Locale('ru'),
+          ],
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          home: const HomePage(),
+        );
+      },
     );
   }
 }

@@ -1,0 +1,21 @@
+{
+  "@@locale": "ru",
+  "editTodoDescriptionLabel": "Редактировать описание задачи",
+  "statsActiveTodoCountLabel": "Количество активных задач",
+  "statsView_completedTodos_listTile": "Завершённые задачи",
+  "statsCompletedTodoCountLabel": "Количество завершённых задач",
+  "statsAppBarTitle": "Статистика",
+  "todosOverviewEmptyText": "Нет доступных задач.",
+  "todosOverviewUndoDeletionButtonText": "Отменить",
+  "todosOverviewTodoDeletedSnackbarText": "{title} удалено.",
+  "todosOverviewFilterTooltip": "Фильтр",
+  "todosOverviewFilterAll": "Все",
+  "todosOverviewFilterActiveOnly": "Только активные",
+  "todosOverviewFilterCompletedOnly": "Только завершённые",
+  "todosOverviewOptionsMarkAllIncomplete": "Отметить все как незавершённые",
+  "todosOverviewOptionsMarkAllComplete": "Отметить все как завершённые",
+  "todosOverviewOptionsClearCompleted": "Очистить завершённые задачи",
+  "todosOverviewAppBarTitle": "Обзор задач",
+  "todosOverviewErrorSnackbarText": "Произошла ошибка. Попробуйте ещё раз.",
+  "todosOverviewOptionsTooltip": "Опции"
+}

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_todos/l10n/l10n.dart';
 import 'package:flutter_todos/todos_overview/bloc/todos_overview_bloc.dart';
+import 'package:flutter_todos/todos_overview/widgets/change_language.dart';
 
 @visibleForTesting
 enum TodosOverviewOption { toggleAll, clearCompleted }
@@ -21,7 +22,7 @@ class TodosOverviewOptionsButton extends StatelessWidget {
       shape: const ContinuousRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(16)),
       ),
-      tooltip: "l10n.todosOverviewOptionsTooltip",
+      tooltip: l10n.todosOverviewOptionsTooltip,
       onSelected: (options) {
         switch (options) {
           case TodosOverviewOption.toggleAll:
@@ -37,15 +38,18 @@ class TodosOverviewOptionsButton extends StatelessWidget {
             enabled: hasTodos,
             child: Text(
               completedTodosAmount == todos.length
-                  ? "l10n.todosOverviewOptionsMarkAllIncomplete"
-                  : "l10n.todosOverviewOptionsMarkAllComplete",
+                  ? l10n.todosOverviewOptionsMarkAllIncomplete
+                  : l10n.todosOverviewOptionsMarkAllComplete,
             ),
           ),
           PopupMenuItem(
             value: TodosOverviewOption.clearCompleted,
             enabled: hasTodos && completedTodosAmount > 0,
-            child: Text("l10n.todosOverviewOptionsClearCompleted"),
+            child: Text(l10n.todosOverviewOptionsClearCompleted),
           ),
+          const PopupMenuItem(
+            child: ChangeLanguage(),
+          )
         ];
       },
       icon: const Icon(Icons.more_vert_rounded),

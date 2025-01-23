@@ -115,7 +115,7 @@ class _DescriptionField extends StatelessWidget {
       initialValue: state.description,
       decoration: InputDecoration(
         enabled: !state.status.isLoadingOrSuccess,
-        labelText: " l10n.editTodoDescriptionLabel",
+        labelText: l10n.editTodoDescriptionLabel,
         hintText: hintText,
       ),
       maxLength: 300,

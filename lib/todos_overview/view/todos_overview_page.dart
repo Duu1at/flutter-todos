@@ -30,7 +30,7 @@ class TodosOverviewView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("l10n.todosOverviewAppBarTitle"),
+        title: Text(l10n.todosOverviewAppBarTitle),
         actions: const [
           TodosOverviewFilterButton(),
           TodosOverviewOptionsButton(),
@@ -46,7 +46,7 @@ class TodosOverviewView extends StatelessWidget {
                   ..hideCurrentSnackBar()
                   ..showSnackBar(
                     SnackBar(
-                      content: Text("l10n.todosOverviewErrorSnackbarText"),
+                      content: Text(l10n.todosOverviewErrorSnackbarText),
                     ),
                   );
               }
@@ -63,14 +63,12 @@ class TodosOverviewView extends StatelessWidget {
                 ..showSnackBar(
                   SnackBar(
                     content: Text(
-                      "l10n.todosOverviewDeletedTodoSnackbarText",
-
-                      //    l10n.todosOverviewTodoDeletedSnackbarText(
-                      //   deletedTodo.title,
-                      // ),
+                      l10n.todosOverviewTodoDeletedSnackbarText(
+                        deletedTodo.title,
+                      ),
                     ),
                     action: SnackBarAction(
-                      label: " l10n.todosOverviewUndoDeletionButtonText",
+                      label: l10n.todosOverviewUndoDeletionButtonText,
                       onPressed: () {
                         messenger.hideCurrentSnackBar();
                         context.read<TodosOverviewBloc>().add(const TodosOverviewUndoDeletionRequested());
@@ -91,7 +89,7 @@ class TodosOverviewView extends StatelessWidget {
               } else {
                 return Center(
                   child: Text(
-                    " l10n.todosOverviewEmptyText",
+                    l10n.todosOverviewEmptyText,
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                 );
