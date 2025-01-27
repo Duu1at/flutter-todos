@@ -17,5 +17,10 @@
   "todosOverviewOptionsClearCompleted": "Очистить завершённые задачи",
   "todosOverviewAppBarTitle": "Обзор задач",
   "todosOverviewErrorSnackbarText": "Произошла ошибка. Попробуйте ещё раз.",
-  "todosOverviewOptionsTooltip": "Опции"
+  "todosOverviewOptionsTooltip": "Опции",
+  "editTodoSaveButtonTooltip": "Сохранить",
+  "editTodoEditAppBarTitle": "Редактировать задачу",
+  "editTodoAddAppBarTitle": "Добавить задачу",
+  "editTodoTitleLabel": "Название задачи"
+
 }

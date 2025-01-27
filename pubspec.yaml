@@ -15,13 +15,13 @@ dependencies:
     sdk: flutter
   intl: any
   shared_preferences: ^2.0.0
-  local_storage_todos_api:
-    path: packages/local_storage_todos_api
   todos_api:
     path: packages/todos_api
   todos_repository:
     path: packages/todos_repository
   equatable: ^2.0.0
+  local_storage_todos_api:
+    path: packages/local_storage_todos_api
 
 dev_dependencies:
   bloc_test: ^9.1.7

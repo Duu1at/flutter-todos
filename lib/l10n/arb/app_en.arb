@@ -17,5 +17,9 @@
   "todosOverviewOptionsClearCompleted": "Clear completed todos",
   "todosOverviewAppBarTitle": "Todos Overview",
   "todosOverviewErrorSnackbarText": "An error occurred. Please try again.",
-  "todosOverviewOptionsTooltip": "Options"
+  "todosOverviewOptionsTooltip": "Options",
+  "editTodoSaveButtonTooltip": "Save",
+  "editTodoEditAppBarTitle": "Edit Task",
+  "editTodoAddAppBarTitle": "Add Task",
+  "editTodoTitleLabel": "Task Title"
 }

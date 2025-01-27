@@ -46,11 +46,11 @@ class EditTodoView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          isNewTodo ? "l10n.editTodoAddAppBarTitle" : "l10n.editTodoEditAppBarTitle",
+          isNewTodo ? l10n.editTodoAddAppBarTitle : l10n.editTodoEditAppBarTitle,
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        tooltip: "l10n.editTodoSaveButtonTooltip",
+        tooltip: l10n.editTodoSaveButtonTooltip,
         shape: const ContinuousRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(32)),
         ),
@@ -85,7 +85,7 @@ class _TitleField extends StatelessWidget {
       initialValue: state.title,
       decoration: InputDecoration(
         enabled: !state.status.isLoadingOrSuccess,
-        labelText: "l10n.editTodoTitleLabel",
+        labelText: l10n.editTodoTitleLabel,
         hintText: hintText,
       ),
       maxLength: 50,
